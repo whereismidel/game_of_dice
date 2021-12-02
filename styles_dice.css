@@ -1,0 +1,111 @@
+body, h1{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: navy;
+}
+.winner h1{
+    margin: 50px;
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+.game_field{
+    margin-top: 100px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+/* Рамки і форма кубиків*/
+.border_dice {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  border: solid 5px #000;
+  border-radius: 20px;
+  background-color: antiquewhite;
+
+  display: inline-flex;
+  margin: 5px;
+}
+.dice_title{
+    font-family: "Jost", sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    top: 5px;
+    text-align: center;
+}
+/* Розмір та форма точки */ 
+.point::before {
+  content: "";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+/* Розміщення 1 точки в кубику */
+.p1 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Розміщення 2 точок в кубику */
+.p2 {
+  justify-content: space-between;
+}
+.p2 .point:nth-child(1) {
+  align-self: flex-end;
+}
+
+/* Розміщення 3 точок в кубику */
+.p3 {
+  justify-content: space-between;
+  align-items: center;
+}
+.p3 .point:nth-child(1) {
+  align-self: flex-end;
+}
+.p3 .point:nth-child(3) {
+  align-self: flex-start;
+}
+
+/* Розміщення 4 точок в кубику */
+.p4 {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.p4 .point {
+  width: 50%;
+}
+.p4 .point:nth-child(even) {
+  text-align: right;
+}
+
+/* Розміщення 5 точок в кубику */
+.p5 {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.p5 .point:nth-child(3){
+    width:100%;
+    text-align: center;
+}
+
+/* Розміщення 6 точок в кубику */
+.p6 {
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-content: space-between;
+}
